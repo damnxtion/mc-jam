@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olive Garden menu - Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hurme+Geometric+Sans+2:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Top Navigation -->
+        <nav class="top-nav">
+            <div class="nav-left">
+                <button class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="logo">
+                    <div class="logo-icon">Q</div>
+                </div>
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Study sets, textbooks, questions" class="main-search">
+                </div>
+            </div>
+            <div class="nav-right">
+                <button class="upgrade-btn">Upgrade to Quizlet Plus</button>
+                <div class="profile-icon">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-book"></i>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-bell"></i>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-chart-bar"></i>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-graduation-cap"></i>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Study Set Header -->
+            <div class="study-set-header">
+                <h1 class="study-set-title">Olive Garden menu</h1>
+                <div class="study-stats">
+                    <span class="stat-item">
+                        <i class="fas fa-chart-line"></i>
+                        <span id="studiedCount">11</span> studied today
+                    </span>
+                    <span class="stat-item">
+                        <i class="fas fa-star"></i>
+                        <span id="rating">4.6</span> (<span id="ratingCount">27</span> ratings)
+                    </span>
+                </div>
+            </div>
+
+            <!-- Study Mode Tabs -->
+            <div class="study-modes">
+                <button class="mode-tab active" data-mode="flashcards">
+                    <i class="fas fa-clone"></i>
+                    Flashcards
+                </button>
+                <button class="mode-tab" data-mode="learn">
+                    <i class="fas fa-sync-alt"></i>
+                    Learn
+                </button>
+                <button class="mode-tab" data-mode="test">
+                    <i class="fas fa-file-alt"></i>
+                    Test
+                </button>
+                <button class="mode-tab" data-mode="match">
+                    <i class="fas fa-puzzle-piece"></i>
+                    Match
+                </button>
+                <button class="mode-tab" data-mode="qchat">
+                    <i class="fas fa-comments"></i>
+                    Q-Chat
+                </button>
+            </div>
+
+            <!-- Flashcard Study Area -->
+            <div class="flashcard-study-area">
+                <!-- Study Controls -->
+                <div class="study-controls">
+                    <div class="study-options">
+                        <button class="hint-btn">
+                            <i class="fas fa-lightbulb"></i>
+                            Get a hint
+                        </button>
+                    </div>
+                    <div class="study-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        <button class="action-btn">
+                            <i class="fas fa-star"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Main Flashcard -->
+                <div class="main-flashcard" id="mainFlashcard">
+                    <div class="flashcard-inner">
+                        <div class="flashcard-front">
+                            <div class="card-content" id="cardQuestion">
+                                The first card
+                            </div>
+                        </div>
+                        <div class="flashcard-back">
+                            <div class="card-content" id="cardAnswer">
+                                Click to reveal answer
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Controls -->
+                <div class="navigation-controls">
+                    <div class="nav-left-section">
+                        <div class="progress-toggle">
+                            <label class="toggle-label">Track progress</label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="trackProgress" checked>
+                                <span class="slider"></span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-center-section">
+                        <button class="nav-btn prev-btn" id="prevCard">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <div class="card-counter">
+                            <span id="currentCard">1</span> / <span id="totalCards">50</span>
+                        </div>
+                        <button class="nav-btn next-btn" id="nextCard">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="nav-right-section">
+                        <button class="control-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="control-btn">
+                            <i class="fas fa-random"></i>
+                        </button>
+                        <button class="control-btn">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                        <button class="control-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Study Set Info -->
+            <div class="study-set-info">
+                <div class="creator-info">
+                    <div class="creator-avatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <div class="creator-details">
+                        <span class="creator-name">coolsideofthepillow</span>
+                        <span class="creator-badge">Teacher</span>
+                    </div>
+                </div>
+                <div class="set-actions">
+                    <button class="action-btn-secondary">
+                        <i class="fas fa-share"></i>
+                        Share
+                    </button>
+                    <button class="action-btn-secondary">
+                        <i class="fas fa-chart-bar"></i>
+                    </button>
+                    <button class="action-btn-secondary">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Cards List (Hidden by default, shown when not in study mode) -->
+            <section class="cards-section" style="display: none;">
+                <div class="cards-grid" id="cardsGrid">
+                    <!-- Cards will be dynamically generated here -->
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Right Sidebar (Ad Space) -->
+        <aside class="right-sidebar">
+            <div class="ad-space">
+                <div class="ad-placeholder">
+                    Display Ad<br>300x250
+                </div>
+            </div>
+            <div class="ad-space">
+                <div class="ad-placeholder tall">
+                    Display Ad<br>300x600
+                </div>
+            </div>
+        </aside>
+
+        <!-- Add Card Modal -->
+        <div class="modal" id="addCardModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Add New Flashcard</h2>
+                    <button class="modal-close" id="closeModal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="cardQuestion">Question</label>
+                        <textarea id="cardQuestion" placeholder="Enter your question..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardAnswer">Answer</label>
+                        <textarea id="cardAnswer" placeholder="Enter the answer..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="cardCategory">Category</label>
+                        <select id="cardCategory">
+                            <option value="general">General</option>
+                            <option value="math">Mathematics</option>
+                            <option value="science">Science</option>
+                            <option value="history">History</option>
+                            <option value="language">Language</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="cancelAdd">Cancel</button>
+                    <button class="btn btn-primary" id="saveCard">Save Card</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
