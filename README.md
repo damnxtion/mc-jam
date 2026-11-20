@@ -2,6 +2,10 @@
 
 A small React + TypeScript app built from the Tejado rental prototype. Tejado helps letting agents in Spain publish rentals that follow the 2023 Housing Law and pick the right tenant faster.
 
+| List a home | Applicants |
+| --- | --- |
+| ![Listing setup wizard: property step with the live rule check panel and move-in costs](docs/screenshots/wizard.png) | ![Applicant grid: scannable candidate cards with fit scores, checks and key numbers](docs/screenshots/applicants.png) |
+
 It has two parts:
 
 - **List a home**: a four-step setup wizard (Property → Rent & terms → Documents → Review & publish). A rule check panel updates as you type and blocks publishing while any rule fails.
